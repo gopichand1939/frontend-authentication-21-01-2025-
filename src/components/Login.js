@@ -10,17 +10,20 @@ const Login = () => {
   const navigate = useNavigate();
 
   // Handle login submission
-  const handleLogin = async () => {
+const handleLogin = async () => {
     try {
       const response = await axios.post(`${API_BASE_URL}/login`, { email, password });
       console.log("Login Response:", response.data);  // Log the response for debugging
       alert("Login successful!");  // Show success message
-      navigate("/home");  // Navigate to home page after login
+      
+      // Navigate to the external site after successful login
+      window.location.href = "https://137137.ccbp.tech/";
     } catch (error) {
       console.error("Login failed:", error);
       alert("Login failed. Please check your credentials.");
     }
   };
+  
 
   return (
     <div className="login-container">

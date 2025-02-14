@@ -17,7 +17,7 @@ const handleLogin = async () => {
       alert("Login successful!");  // Show success message
       
       // Navigate to the external site after successful login
-      window.location.href = "https://137137.ccbp.tech/";
+      window.location.href = "https://student-portal-beta-gold.vercel.app/";
     } catch (error) {
       console.error("Login failed:", error);
       alert("Login failed. Please check your credentials.");
